@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin it Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for the Spin it decision wheel app.">
+    <link rel="stylesheet" href="https://unpkg.com/@knadh/oat/oat.min.css">
+    <script src="https://unpkg.com/@knadh/oat/oat.min.js" defer></script>
+    <style>
+        :root {
+            --lime: #c8ff00;
+            --lime-dark: #aee600;
+            --black: #050505;
+            --text: #111;
+            --muted: #3a3a3a;
+            --panel: rgba(255,255,255,.22);
+            --border: rgba(0,0,0,.18);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--text);
+            background:
+                conic-gradient(from 0deg at 50% 25%,
+                    rgba(255,255,255,.16) 0deg 36deg,
+                    rgba(0,0,0,.05) 36deg 72deg,
+                    rgba(255,255,255,.12) 72deg 108deg,
+                    rgba(0,0,0,.06) 108deg 144deg,
+                    rgba(255,255,255,.14) 144deg 180deg,
+                    rgba(0,0,0,.05) 180deg 216deg,
+                    rgba(255,255,255,.13) 216deg 252deg,
+                    rgba(0,0,0,.06) 252deg 288deg,
+                    rgba(255,255,255,.15) 288deg 324deg,
+                    rgba(0,0,0,.05) 324deg 360deg),
+                linear-gradient(135deg, var(--lime), var(--lime-dark));
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .wrap {
+            min-height: 100vh;
+            padding: 48px 20px;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 34px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--black);
+            font-weight: 950;
+            font-size: 1.2rem;
+            letter-spacing: -0.04em;
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--black);
+            position: relative;
+            box-shadow: 5px 5px 0 rgba(0,0,0,.15);
+        }
+
+        .brand-mark::before {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border: 5px solid var(--lime);
+            border-radius: 50%;
+        }
+
+        .brand-mark::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            width: 10px;
+            height: 20px;
+            transform: translateX(-50%);
+            border-radius: 6px 6px 10px 10px;
+            background: var(--lime);
+        }
+
+        .back-link {
+            color: var(--black);
+            font-weight: 850;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 5px;
+        }
+
+        .hero {
+            padding: 42px;
+            border: 3px solid var(--black);
+            border-radius: 30px;
+            background: var(--panel);
+            box-shadow: 12px 12px 0 rgba(0,0,0,.18);
+            backdrop-filter: blur(12px);
+            margin-bottom: 28px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            padding: 8px 14px;
+            margin-bottom: 22px;
+            border: 2px solid var(--black);
+            border-radius: 999px;
+            color: var(--black);
+            font-weight: 850;
+            background: rgba(255,255,255,.2);
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            color: var(--black);
+            font-size: clamp(2.8rem, 8vw, 5.6rem);
+            line-height: .9;
+            letter-spacing: -0.07em;
+            font-weight: 950;
+        }
+
+        .intro {
+            max-width: 720px;
+            color: var(--black);
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            line-height: 1.45;
+            font-weight: 650;
+        }
+
+        .effective-date {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 14px;
+            border-radius: 14px;
+            background: var(--black);
+            color: var(--lime);
+            font-weight: 850;
+        }
+
+        .content {
+            display: grid;
+            gap: 18px;
+        }
+
+        section {
+            padding: 28px;
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            background: rgba(255,255,255,.18);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            color: var(--black);
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            line-height: 1;
+            letter-spacing: -0.045em;
+            font-weight: 950;
+        }
+
+        p {
+            margin: 0 0 14px;
+            color: var(--muted);
+            font-size: 1.03rem;
+            line-height: 1.65;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin: 0 0 14px 0;
+            padding-left: 22px;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: var(--black);
+            font-weight: 800;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 5px;
+        }
+
+        .note {
+            padding: 18px;
+            border-left: 8px solid var(--black);
+            border-radius: 16px;
+            background: rgba(255,255,255,.24);
+        }
+
+        footer {
+            max-width: 900px;
+            margin: 28px auto 0;
+            color: var(--muted);
+            font-size: .95rem;
+        }
+
+        @media (max-width: 680px) {
+            .wrap {
+                padding: 28px 16px;
+            }
+
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .hero {
+                padding: 28px;
+                border-radius: 24px;
+                box-shadow: 8px 8px 0 rgba(0,0,0,.18);
+            }
+
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <div class="page">
+            <nav class="topbar" aria-label="Page navigation">
+                <a class="brand" href="index.html" aria-label="Spin it home">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span>Spin it</span>
+                </a>
+                <a class="back-link" href="index.html">Back to app page</a>
+            </nav>
+
+            <header class="hero">
+                <div class="eyebrow">Privacy Policy</div>
+                <h1>Spin it respects your privacy.</h1>
+                <p class="intro">
+                    The app is designed to help you make quick decisions with a simple spinning wheel. We do not require an account and we do not directly collect, store, sell, or share your personal information.
+                </p>
+                <p class="effective-date"><b>Effective date:</b> 1 January 2026</p>
+            </header>
+
+            <div class="content">
+                <section>
+                    <h2>Data we collect</h2>
+                    <p>We do <b>not</b> directly collect personal data through Spin it.</p>
+                    <p>This means:</p>
+                    <ul>
+                        <li>No account registration is required.</li>
+                        <li>No personal information is collected by us, such as your name, photos, or precise location.</li>
+                        <li>No usage analytics are used by us.</li>
+                        <li>No crash reporting services are used by us.</li>
+                        <li>No cookies or similar tracking technologies are used by us inside the app.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Local processing</h2>
+                    <p>Your wheel options and decisions are processed on your device. The core app functionality does not require sending your wheel content to our servers.</p>
+                </section>
+
+                <section>
+                    <h2>Third-party advertising: Google AdMob</h2>
+                    <p>Spin it uses <b>Google AdMob</b>, a third-party advertising service provided by Google, to show advertisements inside the app.</p>
+                    <p>Google AdMob may collect or use information such as:</p>
+                    <ul>
+                        <li>Device information.</li>
+                        <li>Advertising identifiers, such as the device advertising ID.</li>
+                        <li>App usage and interaction data related to ads.</li>
+                        <li>Approximate location.</li>
+                        <li>Information used to deliver, measure, and improve ads.</li>
+                    </ul>
+                    <p>Google may use this information to show personalized or non-personalized ads, depending on your device settings, consent choices, location, and applicable laws.</p>
+                    <p>You can learn more about how Google uses data here:</p>
+                    <ul>
+                        <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                        <li><a href="https://policies.google.com/technologies/ads">Google Advertising Technologies</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Consent for users in the EEA, UK, and Switzerland</h2>
+                    <p>For users in the European Economic Area, the United Kingdom, and Switzerland, Google requires certain disclosures and, where legally required, user consent for cookies or similar local storage and for the collection, sharing, and use of personal data for ads personalization.</p>
+                    <p>Where required, the app may show a consent message allowing you to manage your advertising choices.</p>
+                </section>
+
+                <section>
+                    <h2>Children’s privacy</h2>
+                    <p>Spin it is not intended for children under the age of 5, or the minimum age required in your country.</p>
+                    <p>We do not knowingly collect personal data from children. However, because the app uses Google AdMob, Google’s advertising services may process certain device or advertising data.</p>
+                    <p class="note">The app complies with applicable child privacy laws, including COPPA where relevant.</p>
+                </section>
+
+                <section>
+                    <h2>Data sharing</h2>
+                    <p>We do not store user personal data on our own servers.</p>
+                    <p>Any data collected by Google AdMob is handled by Google according to Google’s own privacy practices and retention policies.</p>
+                </section>
+
+                <section>
+                    <h2>Data retention</h2>
+                    <p>We do not sell, trade, or transfer personal information to third parties.</p>
+                    <p>Because the app uses Google AdMob, certain information may be collected and processed by Google as described in Google’s own privacy policy and advertising documentation.</p>
+                </section>
+
+                <section>
+                    <h2>Your privacy choices</h2>
+                    <p>You can control or limit advertising tracking through your device settings.</p>
+                    <p>On iOS, you can manage app tracking permissions in:</p>
+                    <p><b>Settings → Privacy &amp; Security → Tracking</b></p>
+                    <p>You can also reset or limit advertising identifiers through your device privacy settings where available.</p>
+                    <p>Google also provides tools to manage advertising preferences through your Google account and privacy settings.</p>
+                </section>
+
+                <section>
+                    <h2>Changes to this Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+                </section>
+
+                <section>
+                    <h2>Contact</h2>
+                    <p>If you have questions about this Privacy Policy, you can contact the developer via the App Store listing.</p>
+                </section>
+            </div>
+
+            <footer>
+                <p>© 2026 Spin it. This page explains how privacy is handled in the app.</p>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
